@@ -1,0 +1,28 @@
+/* 	Developer: Damilare Aina 
+	Start Date:  03/15/2024 */
+
+	/* Styles for the <nav> element */
+nav {
+	width: 200px; /* Sets the width of the navigation bar to 200 pixels */
+	float: left; /* Aligns the navigation bar to the left side of the container */
+	margin-right: 10px; /* Adds a margin to the right of the navigation bar to separate it from content to its right */
+	margin-top: -35px; /* Moves the navigation bar upward by 35 pixels, overlaying or pulling it closer to elements above it */
+}
+
+/* Styles for the unordered list within the <nav> */
+nav ul {
+	background-color: rgb(148,51,62); /* Sets the background color of the navigation bar to a specific shade of dark red */
+}
+
+/* Styles for list items within the unordered list on hover */
+nav ul li:hover {
+	background-color: rgb(148,51,62); /* Ensures the background color remains the same dark red when a list item is hovered over */
+	border-radius: 5px; /* Rounds the corners of the list item with a radius of 5 pixels, enhancing visual appeal on hover */
+}
+
+/* Styles applied to the <h1> element within the <header> */
+header h1 {
+	width: 100%; /* Ensures the header title spans the full width of its container */
+	margin: -5px 0px 20px -10px; /* Adjusts the header's positioning: moves it slightly upwards and leftwards, and adds spacing below */
+	text-align: center; /* Centers the header text horizontally within the header element */
+}

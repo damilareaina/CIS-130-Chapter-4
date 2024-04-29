@@ -1,0 +1,12 @@
+/* 	Developer: Damilare Aina 
+	Start Date:  03/15/2024 */
+
+/* Ensures navigation elements are not displayed in the print layout */
+nav {
+    display: none; /* Sets the display property to 'none', effectively removing the navigation bar from the print output */
+}
+
+/* Applies centralized text alignment to both header and section elements */
+header, section {
+    text-align: center; /* Centers the text inside the header and section elements, which is commonly preferred in print to enhance readability and aesthetics */
+}

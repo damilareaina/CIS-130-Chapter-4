@@ -1,0 +1,122 @@
+/* 	Developer: Max Coller 
+	Start Date:  04/23/2023 */
+
+/* Sets the base size of the HTML and body elements to fully cover the viewport */
+html, body {
+	height: 100%; /* Ensures the HTML and body elements take up the full height of the viewport */
+	width: 100%; /* Ensures the HTML and body elements take up the full width of the viewport */
+}
+
+/* Hides navigation elements on screens wider than 480 pixels */
+@media screen and (min-width: 480px) {
+	.menu-burger, .menu-chkbx, .hamburger {
+		display: none; /* Sets display property to none, hiding these elements on larger screens */
+	}
+}
+
+/* Duplicates the previous rule to also apply in print and screen contexts beyond 480px width */
+@media print, screen and (min-width:480px) {
+	.menu-burger, .menu-chkbx, .hamburger {
+		display: none; /* Ensures these elements are not displayed in print layouts or on larger screens */
+	}
+}
+
+/* Styles for the header */
+header {
+	width: 105%; /* Sets the width to slightly more than the viewport, possibly to account for negative margins */
+	margin: 0px -10px 0px -10px; /* Pulls the header edges 10 pixels outward on both sides */
+	background-color: rgb(240,248,255); /* Sets a light blue background color */
+}
+
+/* Styles for the main heading within the header */
+header h1 {
+	display: flex; /* Uses Flexbox for layout, aiding alignment of child elements */
+	grid-area: title; /* Places the heading in the 'title' area of a CSS grid layout */
+	font-size: 20px; /* Sets font size */
+	margin: 10px -10px 0px 0px; /* Adjusts margins to align the text properly */
+	align-items: center; /* Vertically centers items in the flex container */
+	width: 100%; /* Ensures the element takes full width of its container */
+	text-shadow: 2px 2px 5px rgb(30,144,255); /* Applies a blue text shadow for a glowing effect */
+	font-family: garamond; /* Uses Garamond typeface for a classic look */
+	background-image: linear-gradient(rgb(255,255,255), rgb(30,144,255)); /* Sets a gradient background from white to blue */
+}
+
+/* Styles for the navigation bar */
+nav {
+	width: 200px; /* Fixes the width of the navigation bar */
+	float: left; /* Floats the nav bar to the left of its container */
+}
+
+/* Styling for unordered list in the nav bar */
+nav ul {
+	line-height: 2em; /* Sets the space between lines to twice the text height for readability */
+	list-style-type: none; /* Removes bullet points from list items */
+	padding-left: 0px; /* Removes padding on the left */
+	text-indent: 5px; /* Indents text slightly for aesthetics */
+	Border-radius: 5px; /* Rounds the corners of the nav list */
+}
+
+/* Additional styling for list items within the navigation */
+nav ul li {
+	background-color: rgb(175,175,175); /* Sets a medium gray background color */
+	border-radius: 5px; /* Rounds corners of each list item */
+	width: 99%; /* Almost full width to allow for padding/margin */
+}
+
+/* Link styles within the navigation */
+nav a {
+	color: rgb(255,255,0); /* Sets text color to yellow */
+	font-weight: bold; /* Makes the font bold */
+	text-decoration: none; /* Removes underline from links */
+}
+
+/* Styles for second-level headings in section elements */
+section h2 {
+	font-family: Copperplate, "Copperplate Gothic", serif; /* Specifies a decorative, serif font family */
+	max-width: 870px; /* Restricts maximum width for readability */
+}
+
+/* Styles for a grid layout designed to display images */
+.image-grid {
+	width: 90%; /* Sets the width to 90% of its container */
+	justify-content: center; /* Centers content horizontally in the grid */
+	align-items: center; /* Centers content vertically in the grid */
+	display: grid; /* Enables grid layout */
+	grid-template-areas: /* Defines specific areas for placing images */
+		"img-top-l img-top-r"
+		"img-bot-l img-bot-r";
+}
+
+/* Specific styling for grid area items, setting flex display and defining grid areas */
+.img-top-l, .img-top-r, .img-bot-l, .img-bot-r {
+	display: flex; /* Uses Flexbox to help center content within each grid area */
+}
+
+/* Further designates grid areas for each image type */
+.img-top-l { grid-area: img-top-l; }
+.img-top-r { grid-area: img-top-r; }
+.img-bot-l { grid-area: img-bot-l; }
+.img-bot-r { grid-area: img-bot-r; }
+
+/* Styles for images arranged in a four-square grid */
+img.four-square {
+	width: auto; /* Allows the browser to determine the width automatically based on the height */
+	height: auto; /* Allows the height to scale fluidly with the width */
+	max-width: 90%; /* Restricts image width to 90% of its container to ensure it doesn't become too large */
+	padding: 5px; /* Adds space around the image inside its frame */
+	margin: 5px; /* Adds space outside the image frame */
+	border-style: solid; /* Sets the border to a solid line */
+	border-color: rgb(175,175,175) rgb(200,200,200); /* Gradient border color for a subtle effect */
+	background-color: black; /* Sets a black background for images, enhancing contrast */
+	border-radius: 20px; /* Significantly rounds the corners of the image */
+	min-width: 100px; /* Ensures images are not too small */
+}
+
+/* Footer styles */
+footer {
+	text-align: center; /* Centers footer text */
+	font-size: .75em; /* Sets the font size smaller than the default */
+	font-family: Garamond; /* Uses Garamond typeface for consistency with other text elements */
+	background-color: rgb(200,200,200); /* Sets a light gray background color */
+	margin: 0px -10px 20px -10px; /* Adjusts margins, particularly adding space at the bottom */
+}

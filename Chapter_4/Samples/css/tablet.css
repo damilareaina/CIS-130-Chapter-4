@@ -1,0 +1,36 @@
+/* 	Developer: Damilare Aina 
+	Start Date:  03/15/2024 */
+
+	
+/* Sets the overall positioning and size of the <nav> element */
+nav {
+	margin: -15px 0px 0px 5px; /* Adjusts the position of the nav, shifting it slightly upwards and to the right */
+	width: 99%; /* Sets the width slightly less than full-width to possibly accommodate borders or padding */
+	height: 100%; /* Sets the height to take the full height of the element's parent container */
+}
+
+/* Styles for the unordered list within the <nav> */
+nav ul {
+	width: 95%; /* Sets the width to 95% of its parent <nav> element */
+	display: flex; /* Enables flexbox, which is a layout model providing for the arrangement of elements on a page */
+	flex-direction: row; /* Sets the direction of the flex items in a row */
+	justify-content: center; /* Centers flex items along the main axis (horizontally, in this case) */
+	align-items: center; /* Centers flex items along the cross axis (vertically, in this case) */
+}
+
+/* Styling for each list item within the unordered list in the <nav> */
+nav ul li {
+	flex: 1; /* Assigns flex grow factor to 1, allowing each item to grow equally to fill the space */
+	margin: 0px; /* Sets the margin to 0, removing space between flex items */
+	padding: 0px; /* Removes padding inside each list item */
+	border: 1px solid rgb(0,0,0); /* Adds a solid black border around each list item */
+	text-align: center; /* Centers text horizontally within each list item */
+}
+
+/* Styles applied to the <h1> element within the <header> */
+header h1 {
+	width: 100%; /* Ensures the header occupies the full width of its container */
+	margin: -5px 0px 0px -10px; /* Adjusts the margin to slightly pull the header element upwards and to the left */
+	text-align: center; /* Aligns the text within the header centrally */
+	font-size: 22px; /* Sets the font size to 22 pixels, making it suitable for tablet displays */
+}

@@ -1,0 +1,100 @@
+/* 	Developer: Damilare Aina 
+	Start Date:  03/15/2024 */
+
+/* Sets the margin to override defaults, positions the header flush against the top-left of its container */
+header {
+	margin: -10px 0px 0px -10px; /* Negative margin to pull the header outwards to the edge */
+	padding-left: 5px; /* Adds padding on the left side inside the header */
+	display: grid; /* Uses CSS Grid layout to position child elements */
+	grid-template-areas: /* Defines named grid areas for placing child elements */
+		"hamburger title title"
+		"nav nav nav";
+}
+
+/* Styles for the title within the header */
+header h1 {
+	display: flex; /* Uses Flexbox for easy alignment of child elements */
+	grid-area: title; /* Positions the title in the 'title' grid area */
+	font-size: 20px; /* Sets the size of the font for the title */
+	margin: 10px -10px 0px 0px; /* Adjusts the margin around the title */
+	align-items: center; /* Centers items vertically within the flex container */
+	width: 100%; /* Ensures the title occupies the full width of its container */
+}
+
+/* Hides the checkbox used for toggling the menu in mobile view */
+.menu-chkbx {
+	display: none; /* Hides the checkbox visually and from the document flow */
+}
+
+/* Styles for the hamburger menu icon */
+.menu-burger {
+	grid-area: hamburger; /* Places the burger menu in the 'hamburger' grid area */
+	padding: 30px 20px 30px 0; /* Pads the burger menu icon for touch accessibility */
+	position: relative; /* Positions the burger menu icon relative to its normal position */
+	visibility: visible; /* Makes sure the burger icon is visible */
+}
+
+/* Basic styling for the hamburger lines */
+.hamburger {
+	display: block; /* Makes the hamburger a block element */
+	height: 2px; /* Sets the height of the hamburger line */
+	width: 20px; /* Sets the width of the hamburger line */
+	position: relative; /* Positions relative to its normal position */
+	background: rgb(0,0,0); /* Colors the hamburger black */
+}
+
+/* Position adjustments for the pseudo-elements before and after the hamburger */
+.hamburger:before {
+	top: 5px; /* Positions the before pseudo-element 5px below the hamburger */
+}
+.hamburger:after {
+	top: -5px; /* Positions the after pseudo-element 5px above the hamburger */
+}
+
+/* Styles applied to both the before and after pseudo-elements of the hamburger */
+.hamburger:before, .hamburger:after {
+	background: rgb(0,0,0); /* Background color set to black */
+	display: block; /* Changes the display to block */
+	width: 100%; /* Each pseudo-element takes the full width of the parent */
+	height: 100%; /* Each pseudo-element takes the full height of the parent */
+	content: ''; /* Necessary for pseudo-elements to display */
+	position: absolute; /* Positions absolutely within their relative parent */
+}
+
+/* Styles for when the menu checkbox is checked */
+.menu-chkbx:checked ~ .menu-burger .hamburger {
+	background: transparent; /* Makes the middle line of the hamburger icon transparent */
+	transform: rotate(-45deg); /* Rotates the remaining lines to form a cross */
+}
+.menu-chkbx:checked ~ .menu-burger .hamburger:before,
+.menu-chkbx:checked ~ .menu-burger .hamburger:after {
+	top: 0; /* Aligns the before and after pseudo-elements to the center */
+}
+
+/* Styles for list items in the navigation menu */
+nav ul li {
+	margin: 10px 0px 10px 0px; /* Sets the margin around each list item */
+	text-align: center; /* Aligns text in the center of the list item */
+	border: 1px solid rgb(0,0,0); /* Adds a border around each list item */
+}
+
+/* Styles for the collapsible menu */
+.menu {
+	grid-area: nav; /* Places the menu in the 'nav' grid area */
+	display: flex; /* Uses Flexbox for layout */
+	flex-direction: column; /* Sets the direction of flex items to a column */
+	max-height: 0; /* Starts with a max height of 0 for a collapsible effect */
+	overflow: hidden; /* Hides anything outside the menu's bounds */
+	margin: 0; /* Removes margin */
+	padding: 0; /* Removes padding */
+}
+
+/* Styles when the menu checkbox is checked */
+.menu-chkbx:checked ~ .menu {
+	max-height: 250px; /* Expands the menu to allow items to be shown */
+	position: absolute; /* Positions the menu absolutely within its container */
+	margin-top: 62px; /* Adds margin to the top to position the menu correctly */
+	z-index: 1; /* Ensures the menu appears above other content */
+	border-radius: 5px; /* Rounds the corners of the menu */
+	background-color: rgb(220,220,220); /* Sets the menu background color */
+}
